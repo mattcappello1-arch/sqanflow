@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f5f4f0;
+  --surface: #ffffff;
+  --ink: #0f0f0e;
+  --ink-muted: #6b6b66;
+  --ink-faint: #b0afa8;
+  --accent: #1a1a18;
+  --accent-green: #2d6a4f;
+  --accent-green-light: #d8f3dc;
+  --border: rgba(15,15,14,0.1);
+  --border-strong: rgba(15,15,14,0.2);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-pill: 100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: 'DM Mono', monospace; }
+
+@keyframes scanline {
+  0%, 100% { top: 18%; opacity: 0.3; }
+  50% { top: 74%; opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up { animation: fadeUp 0.4s ease both; }
+.fade-up-1 { animation: fadeUp 0.4s 0.05s ease both; }
+.fade-up-2 { animation: fadeUp 0.4s 0.1s ease both; }
+.fade-up-3 { animation: fadeUp 0.4s 0.15s ease both; }
+.fade-up-4 { animation: fadeUp 0.4s 0.2s ease both; }
